@@ -1,0 +1,28 @@
+import { ReactNode } from "react";
+import { SafeAreaView, ScrollView, StyleSheet, View } from "react-native";
+import Header from "./Header";
+import { Colors } from "@/constant/Colors";
+
+const Layout = ({ children }: { children: ReactNode }) => {
+  return (
+    <SafeAreaView style={Styles.container}>
+      <Header />
+      <View style={Styles.main}>
+        <ScrollView>{children}</ScrollView>
+      </View>
+    </SafeAreaView>
+  );
+};
+
+export default Layout;
+
+const Styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  main: {
+    flex: 1,
+    backgroundColor: Colors.blueLight,
+    padding: 20,
+  },
+});
