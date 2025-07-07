@@ -33,6 +33,7 @@ const AddTaskForm = () => {
         placeholder="Enter Your Title"
         value={title}
         onChangeText={setTitle}
+        underlineColorAndroid="transparent"
       />
 
       <TextInput
@@ -40,6 +41,9 @@ const AddTaskForm = () => {
         placeholder="Enter Your description"
         value={description}
         onChangeText={setDescription}
+        underlineColorAndroid="transparent"
+        multiline
+        
       />
       <CustomButton onPress={handlePress}>Add</CustomButton>
     </KeyboardAvoidingView>
@@ -58,7 +62,6 @@ const Styles = StyleSheet.create({
     color: "white",
     fontWeight: "600",
     fontSize: 18,
-    outline: "none",
     marginBottom: 18,
     backgroundColor: Colors.blueDark,
   },

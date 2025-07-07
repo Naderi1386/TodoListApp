@@ -6,6 +6,7 @@ type Store = {
   addTask: (task: TaskType) => void;
   removeTask: (id: string) => void;
   editTask: (id: string, editedTask: TaskType) => void;
+  removeAll: () => void;
 };
 
 export const useStore = create<Store>()((set) => ({
@@ -67,4 +68,5 @@ export const useStore = create<Store>()((set) => ({
     set((state) => ({
       tasks: state.tasks.map((task) => (task.id === id ? editedTask : task)),
     })),
+  removeAll: () => set((state) => ({ tasks: [] })),
 }));
