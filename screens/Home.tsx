@@ -10,9 +10,7 @@ const Home = ({ navigation, route }: PropsType) => {
   return (
     <Layout>
       <View>
-        <Text style={Styles.welcomeTitle}>
-          Welcome 👋
-        </Text>
+        <Text style={Styles.welcomeTitle}>Welcome 👋</Text>
         <Text style={Styles.aboutTitle}>
           Organize your tasks, plan your day, and never miss anything again.
         </Text>
