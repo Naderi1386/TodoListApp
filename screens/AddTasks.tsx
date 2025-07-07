@@ -10,7 +10,7 @@ const AddTasks = ({ navigation, route }: PropsType) => {
     <Layout>
       <View>
         <Text style={Styles.title}>Got Something to Do?</Text>
-        <AddTaskForm />
+        <AddTaskForm handleNavigate={()=>navigation.navigate("Tasks")} />
       </View>
     </Layout>
   );

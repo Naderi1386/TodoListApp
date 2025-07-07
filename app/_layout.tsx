@@ -7,7 +7,6 @@ import AddTasks from "@/screens/AddTasks";
 export type StackParamList = {
   AddTasks: undefined;
   Home: undefined;
-  TaskDetails: undefined;
   Tasks: undefined;
 };
 

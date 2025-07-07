@@ -19,9 +19,9 @@ const TaskItems = ({
           onPress={() =>
             editTask(id, { description, id, title, isCompleted: !isCompleted })
           }
-          color={isCompleted ? Colors.red : Colors.green}
+          color={!isCompleted ? Colors.red : Colors.green}
         >
-          {isCompleted ? "Haven't done" : "Done"}
+          {!isCompleted ? "Haven't done" : "Done"}
         </CustomButton>
         <CustomButton onPress={() => removeTask(id)}>Remove 🗑️</CustomButton>
       </View>

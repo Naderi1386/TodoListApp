@@ -10,7 +10,7 @@ import {
   TextInput,
 } from "react-native";
 
-const AddTaskForm = () => {
+const AddTaskForm = ({ handleNavigate }: { handleNavigate: () => void }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const { addTask } = useStore();
@@ -24,6 +24,7 @@ const AddTaskForm = () => {
       };
       addTask(newTask);
       Alert.alert("Success", "Task added! Let’s get things done 💪");
+      handleNavigate();
     }
   };
   return (
@@ -43,7 +44,6 @@ const AddTaskForm = () => {
         onChangeText={setDescription}
         underlineColorAndroid="transparent"
         multiline
-        
       />
       <CustomButton onPress={handlePress}>Add</CustomButton>
     </KeyboardAvoidingView>
