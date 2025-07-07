@@ -1,7 +1,10 @@
 import CustomButton from "@/components/ui/CustomButton";
 import { Colors } from "@/constant/Colors";
+import { useStore } from "@/store/TasksStore";
+import { TaskType } from "@/types/TaskType";
 import { useState } from "react";
 import {
+  Alert,
   KeyboardAvoidingView,
   StyleSheet,
   TextInput,
@@ -10,6 +13,19 @@ import {
 const AddTaskForm = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const { addTask } = useStore();
+  const handlePress = () => {
+    if (title && description) {
+      const newTask: TaskType = {
+        description,
+        title,
+        isCompleted: false,
+        id: title,
+      };
+      addTask(newTask);
+      Alert.alert("Success", "Task added! Let’s get things done 💪");
+    }
+  };
   return (
     <KeyboardAvoidingView behavior="padding" style={Styles.container}>
       <TextInput
@@ -24,9 +40,8 @@ const AddTaskForm = () => {
         placeholder="Enter Your description"
         value={description}
         onChangeText={setDescription}
-        
       />
-      <CustomButton>Add</CustomButton>
+      <CustomButton onPress={handlePress}>Add</CustomButton>
     </KeyboardAvoidingView>
   );
 };
