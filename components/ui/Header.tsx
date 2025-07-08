@@ -1,11 +1,16 @@
 import { Colors } from "@/constant/Colors";
+import { useNavigation } from "@react-navigation/native";
 import { Image, StyleSheet, Text, View } from "react-native";
+import { NavigationProp } from "./BottomTab";
 
 const Header = () => {
+  const navigation = useNavigation<NavigationProp>();
   return (
     <View style={Styles.container}>
       <View style={Styles.header}>
-        <Text style={Styles.title}>Todos List</Text>
+        <Text onPress={() => navigation.navigate("Home")} style={Styles.title}>
+          Todos List
+        </Text>
         <Image
           style={Styles.logo}
           source={{

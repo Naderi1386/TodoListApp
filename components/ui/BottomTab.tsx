@@ -7,7 +7,7 @@ import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { StackParamList } from "@/app/_layout";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-type NavigationProp = NativeStackNavigationProp<StackParamList>;
+export type NavigationProp = NativeStackNavigationProp<StackParamList>;
 type RouteKey = "AddTasks" | "Home" | "Tasks";
 
 interface Route {
@@ -38,7 +38,7 @@ const BottomTab = () => {
 
   return (
     <BottomNavigation
-      
+      activeIndicatorStyle={{ backgroundColor: "transparent" }}
       barStyle={Styles.bottomTab}
       style={{ flex: 0.1 }}
       inactiveColor={Colors.grey}

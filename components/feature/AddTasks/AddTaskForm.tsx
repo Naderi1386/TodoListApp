@@ -26,6 +26,9 @@ const AddTaskForm = ({ handleNavigate }: { handleNavigate: () => void }) => {
       Alert.alert("Success", "Task added! Let’s get things done 💪");
       handleNavigate();
     }
+    else {
+      Alert.alert("Unsuccess", "Please fill up the fields");
+    }
   };
   return (
     <KeyboardAvoidingView behavior="padding" style={Styles.container}>
