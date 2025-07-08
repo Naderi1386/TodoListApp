@@ -12,18 +12,26 @@ const TaskItems = ({
   const { editTask, removeTask } = useStore();
   return (
     <View style={Styles.container}>
-      <Text style={Styles.title}>{title}</Text>
-      <Text style={Styles.description}>{description}</Text>
-      <View style={Styles.buttonsContainer}>
-        <CustomButton
-          onPress={() =>
-            editTask(id, { description, id, title, isCompleted: !isCompleted })
-          }
-          color={!isCompleted ? Colors.red : Colors.green}
-        >
-          {!isCompleted ? "Haven't done" : "Done"}
-        </CustomButton>
-        <CustomButton onPress={() => removeTask(id)}>Remove 🗑️</CustomButton>
+      <View>
+        <Text style={Styles.title}>{title}</Text>
+        <Text style={Styles.description}>{description}</Text>
+        <View style={Styles.buttonsContainer}>
+          <CustomButton
+            onPress={() =>
+              editTask(id, {
+                description,
+                id,
+                title,
+                isCompleted: !isCompleted,
+              })
+            }
+            color={!isCompleted ? Colors.red : Colors.green}
+          >
+            {!isCompleted ? "Haven't done" : "Done"}
+          </CustomButton>
+
+          <CustomButton onPress={() => removeTask(id)}>Remove 🗑️</CustomButton>
+        </View>
       </View>
     </View>
   );
@@ -43,6 +51,7 @@ const Styles = StyleSheet.create({
   description: {
     marginBottom: 20,
     fontSize: 18,
+    fontWeight: "500",
   },
   buttonsContainer: {
     display: "flex",

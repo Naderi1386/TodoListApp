@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { SafeAreaView, ScrollView, StyleSheet, View } from "react-native";
 import Header from "./Header";
 import { Colors } from "@/constant/Colors";
+import BottomTab from "./BottomTab";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
@@ -10,6 +11,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <View style={Styles.main}>
         <ScrollView>{children}</ScrollView>
       </View>
+      <BottomTab />
     </SafeAreaView>
   );
 };
@@ -21,8 +23,9 @@ const Styles = StyleSheet.create({
     flex: 1,
   },
   main: {
-    flex: 1,
+    flex: 0.9,
     backgroundColor: Colors.blueLight,
     padding: 20,
   },
+
 });
