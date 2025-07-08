@@ -38,8 +38,7 @@ const BottomTab = () => {
 
   return (
     <BottomNavigation
-      shifting={false}
-      sceneAnimationEnabled={false}
+      
       barStyle={Styles.bottomTab}
       style={{ flex: 0.1 }}
       inactiveColor={Colors.grey}
