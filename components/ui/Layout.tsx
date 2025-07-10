@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { SafeAreaView, ScrollView, StyleSheet, View } from "react-native";
+import { SafeAreaView, StyleSheet, View } from "react-native";
 import Header from "./Header";
 import { Colors } from "@/constant/Colors";
 import BottomTab from "./BottomTab";
@@ -8,9 +8,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <SafeAreaView style={Styles.container}>
       <Header />
-      <View style={Styles.main}>
-        <ScrollView>{children}</ScrollView>
-      </View>
+      <View style={Styles.main}>{children}</View>
       <BottomTab />
     </SafeAreaView>
   );
