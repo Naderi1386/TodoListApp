@@ -38,6 +38,7 @@ const AddTaskForm = ({ handleNavigate }: { handleNavigate: () => void }) => {
         value={title}
         onChangeText={setTitle}
         underlineColorAndroid="transparent"
+        placeholderTextColor={Colors.white}
       />
 
       <TextInput
@@ -46,6 +47,7 @@ const AddTaskForm = ({ handleNavigate }: { handleNavigate: () => void }) => {
         value={description}
         onChangeText={setDescription}
         underlineColorAndroid="transparent"
+        placeholderTextColor={Colors.white}
         multiline
       />
       <CustomButton onPress={handlePress}>Add</CustomButton>
@@ -58,11 +60,11 @@ export default AddTaskForm;
 const Styles = StyleSheet.create({
   input: {
     borderWidth: 2,
-    borderColor: "white",
+    borderColor: Colors.white,
     borderRadius: 8,
     paddingHorizontal: 8,
     paddingVertical: 10,
-    color: "white",
+    color: Colors.white,
     fontWeight: "600",
     fontSize: 18,
     marginBottom: 18,

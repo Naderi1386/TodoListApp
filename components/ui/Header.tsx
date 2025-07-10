@@ -38,7 +38,7 @@ const Styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: "bold",
-    color: "white",
+    color: Colors.white,
   },
   logo: {
     width: 32,

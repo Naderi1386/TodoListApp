@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet,  View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 import TaskItems from "./TaskItems";
 import { TaskType } from "@/types/TaskType";
 
@@ -21,7 +21,6 @@ const TasksList = ({ tasks }: { tasks: TaskType[] }) => {
 export default TasksList;
 
 const Styles = StyleSheet.create({
-
   separator: {
     borderBottomWidth: 1,
     borderColor: "black",

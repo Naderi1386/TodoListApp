@@ -1,3 +1,4 @@
+import { Colors } from "@/constant/Colors";
 import { ReactNode } from "react";
 import { Pressable, StyleSheet, Text, ViewStyle } from "react-native";
 
@@ -31,6 +32,6 @@ const styles = StyleSheet.create({
   },
   text: {
     fontWeight: "600",
-    color: "white",
+    color: Colors.white,
   },
 });
